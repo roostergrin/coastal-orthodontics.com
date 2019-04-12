@@ -1,0 +1,17 @@
+Ip 216.70.94.74
+
+WP Details
+
+user - coastalorthodontics
+password - $P$B3sEqO5kT
+
+
+FTP Details
+coastalorthodon
+?Xsfe577
+
+Database
+admin_coastalorthodon
+coastalorthodon
+~042Uevj
+

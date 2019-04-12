@@ -1,0 +1,31 @@
+.pages-common-treatments
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/common-treatments') Common Treatments
+       li
+         router-link(to='/types-of-braces') Types of Braces
+       li
+         router-link(to='/surgical-orthodontics') Surgical Orthodontics
+       li
+         router-link(to='/tads') TADs
+       li
+         router-link(to='/acceledent-aura') AcceleDent® Aura
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .before-after-box(v-if='props' v-for="common in props	.acf.common_orthodontic")
+          h2(v-html:span='common.treatment_title')
+          .before-after-img
+            figure
+              img(v-bind:src='common.before_image' alt='before photo')
+              figcaption Before
+            figure
+              img(v-bind:src='common.after_image' alt='after photo')
+              figcaption After
+          .before-after-text(v-html:span='common.treatment_desc')
+  Footer

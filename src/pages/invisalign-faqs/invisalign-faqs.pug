@@ -1,0 +1,29 @@
+.pages-invisalign-faqs
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/invisalign-info') Invisalign® Info
+       li
+         router-link(to='/invisalign-teen-info') Invisalign Teen® Info
+       li
+         router-link(to='/invisalign-costs') Invisalign® Costs
+       li
+         router-link(to='/invisalign-faqs') Invisalign® FAQs
+       li
+         router-link(to='/invisalign-testimonials') Invisalign® Testimonials
+       li
+         router-link(to='/invisalign-videos') Invisalign® Videos
+       li
+         router-link(to='/invisalign-before-after') Invisalign® Before & After
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer

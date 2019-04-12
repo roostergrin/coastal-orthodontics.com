@@ -1,0 +1,38 @@
+.pages-invisalign-before-after
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/invisalign-info') Invisalign® Info
+       li
+         router-link(to='/invisalign-teen-info') Invisalign Teen® Info
+       li
+         router-link(to='/invisalign-costs') Invisalign® Costs
+       li
+         router-link(to='/invisalign-faqs') Invisalign® FAQs
+       li
+         router-link(to='/invisalign-testimonials') Invisalign® Testimonials
+       li
+         router-link(to='/invisalign-videos') Invisalign® Videos
+       li
+         router-link(to='/invisalign-before-after') Invisalign® Before & After
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+         .after-before-slider
+           swiper(:options='swiperOption')
+             swiper-slide(v-for='ab_slider in props.acf.after_before_slider')
+               img(v-if='ab_slider.after_before_image' v-bind:src='ab_slider.after_before_image')
+               .caption(v-html='ab_slider.after_before_caption')
+             .swiper-pagination.swiper-pagination-white(slot='pagination')
+             .swiper-button-prev.swiper-button-white(slot='button-prev')
+             .swiper-button-next.swiper-button-white(slot='button-next')
+         .invisalign-footer(v-html='props.acf.social_links')
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer

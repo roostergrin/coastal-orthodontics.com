@@ -1,0 +1,18 @@
+.pages-meet-the-team
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/meet-dr-kevin-oliveira') Meet Dr. Kevin Oliveira
+       li
+         router-link(to='/meet-the-team') Meet the Team
+       li
+         router-link(to='/what-sets-us-apart') What Sets Us Apart
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+  Footer

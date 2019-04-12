@@ -1,0 +1,844 @@
+// --------------------------------------------------------
+// units
+// --------------------------------------------------------
+@import './sass/units/units'
+
+// --------------------------------------------------------
+// vendors
+// --------------------------------------------------------
+@import './sass/vendors/*.sass'
+
+// --------------------------------------------------------
+// utilities
+// --------------------------------------------------------
+@import './sass/utilities/**/*'
+// @import './shared/**/*.sass'
+@import './styleguide/*.sass'
+
+// --------------------------------------------------------
+// pages
+// --------------------------------------------------------
+@import './pages/**/*.sass'
+@import './pages/**/**/*.sass'
+
+// --------------------------------------------------------
+// components
+// --------------------------------------------------------
+@import './base/*.sass'
+@import './components/**/*.sass'
+@import './components/**/**/*.sass'
+@import './components/**/**/**/*.sass'
+
+// NOTE: No sass files in shared directory -- throws error when compiling
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: #36364b
+
+a
+  transition: 0.3s
+  -webkit-transition: 0.3s
+  -moz-transition: 0.3s
+  text-decoration: none !important
+  color: #04184d
+
+ul
+  margin: 0
+  padding-left: 25px
+
+p
+  font-size: 15px
+  line-height: 23px
+  color: #36364b
+
+h1, h2, h3, h4, h5, h6
+  margin: 0px
+  font-weight: normal
+
+/********************* HEADER CSS STARTS HERE *************
+
+.loader
+  border-top: 5px solid #3569ad
+  border-right: 5px solid #3569ad
+  border-bottom: 5px solid #3569ad
+  border-left: 5px solid #f9881d;
+
+.container
+  width: 100%
+  max-width: 960px
+  margin: 0 auto
+  &:before
+    content: ''
+    display: table
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+.header
+  width: 100%
+  float: left
+  position: relative
+  .open-menu
+    position: absolute
+    top: 10px
+    right: 10px
+    z-index: 999
+    font-size: 30px
+    color: #fff
+    display: none
+
+.homepageslider
+  width: 100%
+  float: left
+  line-height: 0
+  text-align: center
+  padding-bottom: 50px
+  border-bottom: solid 1px #000000
+  background: #6f9fdf
+  background: -moz-linear-gradient(top, #598ccd 0%, #214f90 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #598ccd), color-stop(100%, #214f90))
+  background: -webkit-linear-gradient(top, #598ccd 0%, #214f90 100%)
+  img
+    width: 100%
+
+.slider-caption
+  text-transform: uppercase
+  color: #F9881D
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.6)
+  font-size: 35px
+  position: absolute
+  z-index: 999
+  right: 2%
+  bottom: 15%
+
+.after-before-slider
+  width: 92%
+  .swiper-container
+    padding-top: 47px
+  .caption
+    background: #444
+    color: #fff
+    padding: 5px 15px
+    font-size: 15px
+    line-height: 20px
+    margin-top: -3px
+  .swiper-pagination
+    top: 0px
+    background: #444
+    padding: 15px 0
+    bottom: auto !important
+  .swiper-button-next, .swiper-button-prev
+    top: 29px
+    width: 15px
+    height: 30px
+    background-size: contain
+
+.top-header
+  padding-bottom: 10px
+  width: 100%
+  float: left
+  border-top: 7px solid #04184d
+  background: #6f9fdf
+  background: -moz-linear-gradient(top, #6f9fdf 0%, #c9d9f2 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6f9fdf), color-stop(100%, #c9d9f2))
+  background: -webkit-linear-gradient(top, #6f9fdf 0%, #c9d9f2 100%)
+
+.logo
+  float: left
+  width: 65%
+  img
+    width: 100%
+
+.header-right
+  float: right
+  text-align: right
+  font-family: 'Lato', sans-serif
+
+.social-icon
+  list-style: none
+  margin: 5px 0px 15px
+  padding: 0
+  li
+    display: inline-block
+    margin: 0 1px
+    img
+      width: 25px
+
+.top-address
+  .phone
+    font-size: 22px
+    line-height: 27px
+    color: #3869ac
+    margin: 0px
+    font-family: 'Lato', sans-serif
+  a
+    color: #333333
+    font-size: 14px
+    line-height: 16px
+    &:hover
+     color: #3869ac
+
+.menu-area
+  float: left
+  width: 100%
+  position: relative
+  background: #598ccd
+  .logo
+    width: 290px
+    margin: 0 auto
+    img
+      width: 100%
+      position: relative
+      padding: 50px 0px 35px
+
+.main-menu
+  padding: 23px 0
+  width: 100%
+  float: left
+  font-family: 'Open Sans Condensed', sans-serif
+  .router-link-exact-active
+    background: linear-gradient(to bottom, #112a4c 0%, #030d1a 80%)
+    color: #f9881d
+    background: #112a4c
+    background: -webkit-linear-gradient(top, #112a4c 0%, #030d1a 80%)
+    border-top: 2px solid #030d1a
+  ul
+    display: table
+    margin: 0 auto
+    padding: 0px
+    li
+      float: left
+      position: relative
+      list-style: none
+    > li > a
+      font-weight: 500
+      font-size: 16px
+      color: #112a4c
+      padding: 4px 20px
+      letter-spacing: 0.4px
+      display: block
+      text-transform: uppercase
+      font-weight: bold
+      border-top: 2px solid transparent
+      letter-spacing: -0.1px
+      line-height: 20px
+  > ul > li
+    &.active a, &:hover a
+      background: linear-gradient(to bottom, #112a4c 0%, #030d1a 80%)
+      color: #f9881d
+      background: #112a4c
+      background: -webkit-linear-gradient(top, #112a4c 0%, #030d1a 80%)
+      border-top: 2px solid #030d1a
+
+.home-slider
+  width: 100%
+  float: left
+  border-bottom: solid 1px #000000
+  background: #598ccd
+  padding-bottom: 50px
+  figure
+    margin: 0px
+  img
+    width: 100%
+
+.main-menu
+  .submenu
+    display: none
+    position: absolute
+    width: 240px
+    background: #578acc
+    z-index: 999
+    li
+      width: 100%
+  ul li .submenu li a
+    font-size: 14px
+    line-height: 18px
+    color: #fff
+    background: none
+    border: none
+    padding: 5px 20px
+    text-transform: capitalize
+  li.dropdown
+    &:hover .submenu
+      display: block
+    .submenu li:hover a
+      background: #112a4c
+  ul li:last-child .submenu
+    right: 0
+    .submenu li a.router-link-exact-active
+      color: #000
+
+/********************* HEADER CSS ENDS HERE *************
+
+.clear::after
+  content: ""
+  clear: both
+  display: table
+
+.callouts
+  width: 100%
+  float: left
+  background: #cadcf4
+  text-transform: uppercase
+  padding: 30px 0px
+
+.cta-box
+  &:last-child
+    margin: 0
+  width: 21.25%
+  float: left
+  text-align: center
+  margin-right: 5%
+  h4
+    font-size: 20px
+    line-height: 24px
+    margin: 4px 0px 10px
+    font-weight: lighter
+    span
+      font-weight: 700
+  a
+    color: #04184d
+    display: block
+    padding: 10px 0px
+    .learn-more
+      display: block
+      margin: 0 auto
+      font-weight: 700
+      padding: 8px 0
+      width: 135px
+      background: transparent url(https://coastal-orthodontics.com/wp-content/uploads/2019/03/learn-more-off.png) center center no-repeat
+      color: #fff
+    &:hover .learn-more
+      background: transparent url(https://coastal-orthodontics.com/wp-content/uploads/2019/03/learn-more-on.png) center center no-repeat
+      color: #0a578b
+  p
+    font-size: 15px
+    line-height: 23px
+    color: #002c62
+    margin: 0
+  a:hover
+    h4
+      color: #f98816
+    background: #c1d5ee
+
+.home-about
+  background: #ffffff
+  width: 100%
+  float: left
+  padding: 40px 0px
+  background: linear-gradient(to bottom, #d9e6f6 0%, #ffffff 100%)
+  background: -moz-linear-gradient(top, #d9e6f6 0%, #ffffff 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d9e6f6), color-stop(100%, #ffffff))
+  h1
+    font-size: 38px
+    color: #f9881d
+    font-weight: lighter
+    font-family: 'Lato', sans-serif
+    margin-bottom: 20px
+  p
+    font-size: 15px
+    color: #36364b
+    line-height: 23px
+    margin-bottom: 27px
+  li
+    color: #36364b
+
+.footer
+  width: 100%
+  float: left
+  position: relative
+
+.footer-top
+  padding: 30px 0px 12px
+  background: #649ae0
+  background: -webkit-linear-gradient(top, #649ae0 0%, #19549f 100%)
+  background: linear-gradient(to bottom, #649ae0 0%, #19549f 100%)
+
+.footer .location
+  width: 47.5%
+  float: left
+  padding: 15px 0
+
+.location
+  a
+    color: #fff
+    display: table
+  .map-img
+    width: 38.75%
+    float: left
+    img
+      width: 100%
+
+.map-address
+  .phone
+    color: #fff
+    font-size: 1.2em
+    margin: 0px
+  width: 56.25%
+  float: right
+  padding-top: 65px
+  font-size: 15px
+
+.foot-logo
+  width: 47.5%
+  float: right
+  padding: 15px 0
+  a
+    display: block
+    width: 100%
+    text-align: center
+    margin-bottom: 25px
+
+.footer-bottom
+  width: 100%
+  float: left
+  background: #00427f
+  background: -moz-linear-gradient(top, #00427f 0%, #001c4c 100%)
+  background: linear-gradient(to bottom, #00427f 0%, #001c4c 100%)
+  background: -webkit-linear-gradient(top, #00427f 0%, #001c4c 100%)
+  padding: 50px 0
+
+.footer-menu
+  width: 65%
+  float: left
+  ul
+    padding: 0px
+    margin: 0px
+    list-style: none
+  a
+    color: #fff
+
+.footer-bottom h5
+  font-family: 'Open Sans Condensed', sans-serif
+  color: #f98816
+  text-transform: uppercase
+  font-size: 15px
+  font-weight: bold
+  margin: 0.5em 0
+
+.footer-menu ul li
+  display: inline-block
+  padding: 0 25px 5px 0
+  font-size: 15px
+
+.footer-social
+  float: right
+  width: 30%
+  .social-icon li img
+    width: auto
+
+#backtotop
+  position: absolute
+  left: 50%
+  top: -25px
+  cursor: pointer
+  margin-left: -27px
+
+.inner-page
+  width: 100%
+  float: left
+  background: #fff
+  background: linear-gradient(to bottom, #d9e6f6 0%, #ffffff 100%)
+  background: -moz-linear-gradient(top, #d9e6f6 0%, #ffffff 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d9e6f6), color-stop(100%, #ffffff))
+
+.subnav
+  width: 100%
+  float: left
+  padding: 0px 15px
+  border-top: solid 1px #000000
+  ul
+    padding: 45px 0
+    margin: 0px
+    list-style: none
+    display: table
+    margin: 0 auto
+    li
+      float: left
+      a
+        font-size: 15px
+        line-height: 26px
+        padding: 0px 6px
+        border-right: 1px solid #04184d
+        color: #04184d
+      &:last-child a
+        border: none
+      a:hover
+        color: #f9881d
+
+.main-content
+  width: 100%
+  float: left
+  padding-bottom: 30px
+  .left-area
+    width: 65%
+    float: left
+    margin-bottom: 30px
+    p
+      margin-bottom: 30px
+    ul
+      margin-bottom: 30px
+  .featured-img
+    width: 30%
+    float: right
+    text-align: center
+    figure
+      margin: 0px
+      img
+        max-width: 100%
+        box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35)
+        -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35)
+        -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.35)
+  hr
+    background: #fff
+    height: 1px
+  h1
+    color: #f9881d
+    font-size: 38px
+    line-height: 45px
+    font-weight: lighter
+    margin-bottom: 30px
+    font-family: 'Lato', sans-serif
+  h2
+    font-size: 19px
+    color: #112a4c
+    font-weight: 700
+    font-family: 'Lato', sans-serif
+    margin-bottom: 20px
+    letter-spacing: 0;
+  h3
+    font-size: 17px
+    color: #36364b
+    line-height: 20px
+    margin-bottom: 15px
+    font-weight: 700
+    font-family: 'Lato', sans-serif
+  li
+    font-size: 15px
+    line-height: 1.3
+    color: #36364b
+  .left-area img
+    max-width: 100%
+	
+.pages-meet-the-team
+ .left-area
+    width: 100%
+p img
+  padding: 0
+  max-width: 100%
+
+img
+  &.centered
+    display: block
+    margin-left: auto
+    margin-right: auto
+  &.alignright
+    padding: 4px
+    margin: 0 0 15px 15px
+    display: inline
+    clear: both
+  &.alignleft
+    padding: 4px
+    margin: 0 15px 15px 0
+    display: inline
+    clear: left
+
+.alignright
+  float: right
+
+.alignleft
+  float: left
+
+.aligncenter, div.aligncenter
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+.wp-caption
+  border: 1px solid #ddd
+  text-align: center
+  background-color: #f3f3f3
+  padding-top: 4px
+  margin: 10px
+  img
+    margin: 0
+    padding: 0
+    border: 0 none
+  p.wp-caption-text
+    font-size: 11px
+    line-height: 17px
+    padding: 0 4px 5px
+    margin: 0
+.pages-types-braces, .pages-common-treatments
+ .left-area
+   width: 100%
+
+.testimonials
+  list-style: none
+  li
+   margin: 20px 0
+   clear: both
+
+.before-after-box
+  width: 100%
+  float: left
+  padding-bottom: 20px
+  margin-bottom: 20px
+  border-bottom: 1px solid #fff
+
+.before-after-img
+  float: left
+  width: 50%
+  figure
+    margin: 0 15px 0
+    float: left
+    width: 40%
+    text-align: center
+    padding: 0 15px
+  img
+    float: left
+    text-align: center
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, 0.3)
+
+.before-after-text
+  float: right
+  width: 50%
+  font-size: 15px
+
+.contact-form
+ p
+  font-size: 17px
+ .form-group
+   width: 100%
+   float: left
+   margin: 0 0 20px
+   select
+     width: 60%
+     height: 34px
+     font-size: 14px
+     padding: .5%;
+   textarea
+     width: 80%
+     border: 1px solid #ccc;
+     height: 150px
+   label
+     width: 100%
+     font-size: 17px
+     display: block
+     margin-bottom: 5px
+   label.required
+     font-weight: 700
+   input
+     width: 80%
+     border: 1px solid #ccc;
+     padding: 5px
+   span.quiet
+     font-style: italic
+     display: block
+     width: 100%
+   input.form-btn
+     background-color: #04184d
+     color: #fff
+     padding: 8px 12px
+     cursor: pointer
+     width: auto
+
+#average-edit
+  display: block
+  margin: 15px 0
+
+.shift
+  position: relative
+  transition: 0.3s
+  -webkit-transition: 0.2s
+  -moz-transition: 0.2s
+  bottom: 0px
+  &:hover
+    bottom: 3px
+
+.pages-sitemap
+  .main-content
+    padding-top: 40px
+
+.main-menu ul li .submenu li a.router-link-exact-active
+  color: #fff
+  background: #112a4c
+
+.invisalign-footer
+  background: rgba(255, 255, 255, 0.7)
+  width: 75%
+  margin: 30px 10px
+  padding: 0 15px 25px
+  border: solid 1px rgba(0, 0, 0, 0.3)
+  text-align: center
+  p
+    margin: 0 !important
+  h3
+    background: #97AFC2
+    margin: 0 -15px 20px
+    padding: 8px 15px
+    color: #fff
+    font-size: 1.25em
+  ul.cf
+    padding: 0
+    margin: 0 0 15px
+  li
+    list-style: none
+    display: inline-block
+    width: 32%
+    padding: 0
+    margin: 4px 0
+
+.invisalign-footer-logo
+  margin: 0
+  width: 180px
+  max-width: 100%
+
+.top-close-menu
+  position: absolute
+  right: 10px
+  top: 10px
+  .fa
+    font-size: 30px
+    color: #fff
+
+#mobile-menu
+    > ul{ padding: 0}
+    .closebtn
+        position: absolute
+        right: 10px
+        top: 9px
+        color: #3869ac
+        font-size: 33px
+    ul
+      li
+        list-style: none
+        position: relative
+        margin-bottom: 10px
+        .sub-menu
+            margin-left: -30px
+            background-color: rgb(78, 78, 78)
+            padding: 10px 30px
+            margin-bottom: 12px
+            margin-top: 12px
+        a, .menu-item-main
+            color: #fff
+            cursor: pointer
+            font-size: 16px
+            padding: 2px 0px
+            display: inline-block
+            text-decoration: none
+            line-height: 18px
+        .subMenu_open
+            background-color: #3869ac
+            color: #fff
+            width: 25px
+            height: 25px
+            display: inline-block
+            float: right
+            text-align: center
+            position: absolute
+            right: 10px
+            top: 0px
+            line-height: 24px
+    &.active
+      transform: translate(0px , 0px)
+    position: fixed
+    overflow-y: auto
+    padding: 60px 0px 0px 30px
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-color: #717372
+    max-width: 320px
+    width: 100%
+    transform: translate(-350px , 0px)
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+    z-index: 99
+
+.mobile-toggle:before
+    position: absolute
+    content: "\F039"
+    font-family: FontAwesome
+    font-size: 20px
+    top: 14px
+    right: 5px
+    color: #4f4f4f
+
+@media only screen and (max-width: 991px)
+  .footer-menu
+    a
+      font-size: 14px
+    ul li
+      padding-right: 15px
+  .map-address
+    padding-top: 30px
+  .cta-box
+    width: 45%
+    margin-bottom: 30px
+  .container
+    padding: 0px 15px
+    width: 750px
+  .main-menu ul > li > a
+    font-size: 14px
+    padding: 4px 10px
+
+@media only screen and (max-width: 767px)
+  .header
+    .open-menu
+      display: block
+  .homepageslider
+    .container
+      padding: 0
+    .slider-caption
+      font-size: 24px
+  .before-after-img, .before-after-text
+    width: 100%
+  .before-after-img figure
+    margin: 0 0 20px
+    width: 50%
+  .main-content .left-area, .main-content .featured-img
+    width: 100%
+  .main-menu
+    display: none
+  .container
+    width: 100%
+  .home-slider
+    padding: 20px 0
+  .footer .location, .foot-logo, .footer-menu, .footer-social
+    width: 100%
+
+@media only screen and (max-width: 479px)
+  .main-content
+    h1
+      font-size: 30px
+  .after-before-slider
+    margin: 0 auto
+  .invisalign-footer
+    width: 100%
+    margin: 30px 0
+  img.alignright, img.alignleft
+    float: none
+    margin: 0 auto
+    display: block
+  .subnav ul
+    padding: 30px 0
+  .cta-box
+    width: 100%
+    margin: 0 0 30px
+  .logo
+    width: 100%
+    margin-bottom: 20px
+    padding-top: 30px

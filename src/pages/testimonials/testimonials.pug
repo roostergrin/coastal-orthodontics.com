@@ -1,0 +1,25 @@
+.pages-testimonials
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/office-visits') Office Visits
+       li
+         router-link(to='/financial-information') Financial Information
+       li
+         router-link(to='/patient-forms') Patient Forms
+       li
+         router-link(to='/orthodontic-faqs') Orthodontic FAQs
+       li
+         router-link(to='/testimonials') Testimonials
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer

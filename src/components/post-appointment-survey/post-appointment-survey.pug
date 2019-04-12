@@ -1,0 +1,66 @@
+.contact-form
+  form(action='https://coastal-orthodontics.com/thank-you/' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='291')
+      input(type='hidden' name='_wpcf7_version' value='5.1.1')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f291-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+
+    div.form-group
+     label
+       span Please describe your experience visiting our practice.
+     textarea(name='textarea-1', type='textarea', id='describeyourexperience')
+    div.form-group
+     label
+       span Please describe your experience working with the doctor(s) and staff.
+     textarea(name='textarea-2', type='textarea', id='describewithdoctor')
+    div.form-group
+     label
+       span What was your favorite thing about being at our practice?
+     textarea(name='textarea-3', type='textarea', id='favoritething')
+    div.form-group
+     label
+       span What areas could we improve upon to make your experience even more enjoyable?
+     textarea(name='textarea-4', type='textarea', id='improvearea')
+    p How would you rate your overall experience?
+      span.wpcf7-list-item#average-edit(for='Poor')
+        input.average-radio(name='rating[]', type='radio', value='Poor', id='overallexperience')
+        |  Poor
+      span.wpcf7-list-item#average-edit(for='Average')
+        input.average-radio(name='rating[]', type='radio', value='Average'  id='overallexperience')
+        |  Average
+      span.wpcf7-list-item#average-edit(for='Good')
+        input.average-radio(name='rating[]', type='radio', value='Good' id='overallexperience')
+        |  Good
+      span.wpcf7-list-item#average-edit(for='Great')
+        input.average-radio(name='rating[]', type='radio', value='Great'  id='overallexperience')
+        |  Great
+    div.form-group
+     label
+       span Please provide any additional comments/suggestions.
+     textarea(name='textarea-5', type='textarea', id='commentsuggestion')
+    h2 Please provide your name and email address:
+    h2 Contact Information:
+    div.form-group
+     label Would you like a member of our team to contact you to further discuss your experience?
+     select.formDropdown(name='menu-242', class='control-select-edit', id='furtherdiscuss' onChange='getDropDown(this)')
+         option(value='Select an option') -Select an option-
+         option(value='Yes') Yes
+         option(value='No') No thank you; see you at my next appointment.
+    h2 Please provide your name and email address:
+    div.form-group
+     label.required
+       span Your Name
+     input(name='yourname2', id='yourname', type='text')
+     span.quiet First and Last
+    div.form-group
+     label.required
+       span Your Email Address:
+     input(name='youremail2', type='email', id='emailID2')
+    div.form-group
+      input(type='submit', class='form-btn', value='Submit Feedback' onclick='return validatePost()')      
+      
+         
+    
+         

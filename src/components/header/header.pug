@@ -1,0 +1,215 @@
+.header(v-if='props')
+  .top-header
+    .container
+      .logo
+        router-link(to='/')
+          img(v-bind:src='props.acf.logo')
+      .header-right
+        ul.social-icon
+          li
+            a(v-bind:href='props.acf.facebook_url' target='_blank')
+              img.shift(src='https://coastal-orthodontics.com/wp-content/uploads/2019/03/facebook.png' alt='Facebook')
+          li
+            a(v-bind:href='props.acf.google_plus_url' target='_blank')
+              img.shift(src='https://coastal-orthodontics.com/wp-content/uploads/2019/03/google-plus.png' alt='Google Plus')
+          li
+            a(v-bind:href='props.acf.linkedin_url' target='_blank')
+              img.shift(src='https://coastal-orthodontics.com/wp-content/uploads/2019/03/linkedin.png' alt='Linked In')
+          li
+            a(v-bind:href='props.acf.youtube_url' target='_blank')
+              img.shift(src='https://coastal-orthodontics.com/wp-content/uploads/2019/03/youtube.png' alt='YouTube')
+        .top-address
+          p.phone(v-html:span='props.acf.phone_number')
+          router-link(v-bind:to='"/"+props.acf.address_url')
+            span(v-html:span='props.acf.address')
+  .open-menu(onclick="openNav()")
+    .i.fa.fa-bars
+  .menu-area
+    .container
+      .main-menu
+        .top-close-menu
+        ul
+          li
+            router-link.router-link-active(to='/') Home
+          li.dropdown
+            router-link(to='/meet-dr-kevin-oliveira') About Us
+            ul.submenu
+              li
+                router-link(to='/meet-dr-kevin-oliveira') Meet Dr. Kevin Oliveira
+              li
+                router-link(to='/meet-the-team') Meet the Team
+              li
+                router-link(to='/what-sets-us-apart') What Sets Us Apart
+          li.dropdown
+            router-link(to='/office-visits') For New Patients
+            ul.submenu
+              li
+                router-link(to='/office-visits') Office Visits
+              li
+                router-link(to='/financial-information') Financial Information
+              li
+                router-link(to='/patient-forms') Patient Forms
+              li
+                router-link(to='/orthodontic-faqs') Orthodontic FAQs
+              li
+                router-link(to='/testimonials') Testimonials
+          li.dropdown
+            router-link(to='/about-orthodontics') Wearing Braces
+            ul.submenu
+              li
+                router-link(to='/about-orthodontics') About Orthodontics
+              li
+                router-link(to='/life-with-braces') Life with Braces
+              li
+                router-link(to='/brushing-and-flossing') Brushing and Flossing
+              li
+                router-link(to='/for-all-ages') For All Ages
+              li
+                router-link(to='/early-prevention') Early Prevention
+              li
+                router-link(to='/types-of-appliances') Types of Appliances
+              li
+                router-link(to='/palatal-expander') Palatal Expander
+              li
+                router-link(to='/orthodontic-retention') Orthodontic Retention
+              li
+                router-link(to='/emergency-care') Emergency Care
+          li.dropdown
+            router-link(to='/common-treatments') Orthodontic Treatments
+            ul.submenu
+              li
+                router-link(to='/common-treatments') Common Treatments
+              li
+                router-link(to='/types-of-braces') Types of Braces
+              li
+                router-link(to='/surgical-orthodontics') Surgical Orthodontics
+              li
+                router-link(to='/tads') TADs
+              li
+                router-link(to='/acceledent-aura') AcceleDent&reg; Aura
+          li.dropdown
+            router-link(to='/invisalign-info') Invisalign&reg;
+            ul.submenu
+              li
+                router-link(to='/invisalign-info') Invisalign&reg; Info
+              li
+                router-link(to='/invisalign-teen-info') Invisalign Teen&reg; Info
+              li
+                router-link(to='/invisalign-costs') Invisalign&reg; Costs
+              li
+                router-link(to='/invisalign-faqs') Invisalign&reg; FAQs
+              li
+                router-link(to='/invisalign-testimonials') Invisalign&reg; Testimonials
+              li
+                router-link(to='/invisalign-videos') Invisalign&reg; Videos
+              li
+                router-link(to='/invisalign-before-after') Invisalign&reg; Before &amp; After
+          li.dropdown
+            router-link(to='/wareham-office-location') Contact Us
+            ul.submenu
+              li
+                router-link(to='/wareham-office-location') Wareham Office Location
+              li
+                router-link(to='/appointment-request') Appointment Request
+              li
+                router-link(to='/post-appointment-survey') Post-Appointment Survey
+      #mobile-menu
+        .top-close-menu(onclick="closeNav()")
+          i.fa.fa-times
+        ul
+          li
+            router-link.router-link-active(to='/') Home
+          li.dropdown
+            router-link(to='/meet-dr-kevin-oliveira') About Us
+            span.subMenu_open(id="toggleClass-1" onclick='subMenu(1)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-1" style="display: none;")
+              li
+                router-link(to='/meet-dr-kevin-oliveira') Meet Dr. Kevin Oliveira
+              li
+                router-link(to='/meet-the-team') Meet the Team
+              li
+                router-link(to='/what-sets-us-apart') What Sets Us Apart
+          li.dropdown
+            router-link(to='/office-visits') For New Patients
+            span.subMenu_open(id="toggleClass-2" onclick='subMenu(2)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-2" style="display: none;")
+              li
+                router-link(to='/office-visits') Office Visits
+              li
+                router-link(to='/financial-information') Financial Information
+              li
+                router-link(to='/patient-forms') Patient Forms
+              li
+                router-link(to='/orthodontic-faqs') Orthodontic FAQs
+              li
+                router-link(to='/testimonials') Testimonials
+          li.dropdown
+            router-link(to='/about-orthodontics') Wearing Braces
+            span.subMenu_open(id="toggleClass-3" onclick='subMenu(3)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-3" style="display: none;")
+              li
+                router-link(to='/about-orthodontics') About Orthodontics
+              li
+                router-link(to='/life-with-braces') Life with Braces
+              li
+                router-link(to='/brushing-and-flossing') Brushing and Flossing
+              li
+                router-link(to='/for-all-ages') For All Ages
+              li
+                router-link(to='/early-prevention') Early Prevention
+              li
+                router-link(to='/types-of-appliances') Types of Appliances
+              li
+                router-link(to='/palatal-expander') Palatal Expander
+              li
+                router-link(to='/orthodontic-retention') Orthodontic Retention
+              li
+                router-link(to='/emergency-care') Emergency Care
+          li.dropdown
+            router-link(to='/common-treatments') Orthodontic Treatments
+            span.subMenu_open(id="toggleClass-4" onclick='subMenu(4)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-4" style="display: none;")
+              li
+                router-link(to='/common-treatments') Common Treatments
+              li
+                router-link(to='/types-of-braces') Types of Braces
+              li
+                router-link(to='/surgical-orthodontics') Surgical Orthodontics
+              li
+                router-link(to='/tads') TADs
+              li
+                router-link(to='/acceledent-aura') AcceleDent&reg; Aura
+          li.dropdown
+            router-link(to='/invisalign-info') Invisalign&reg;
+            span.subMenu_open(id="toggleClass-5" onclick='subMenu(5)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-5" style="display: none;")
+              li
+                a(href='/invisalign-info') Invisalign&reg; Info
+              li
+                a(href='/invisalign-teen-info') Invisalign Teen&reg; Info
+              li
+                a(href='/invisalign-costs') Invisalign&reg; Costs
+              li
+                a(href='/invisalign-faqs') Invisalign&reg; FAQs
+              li
+                a(href='/invisalign-testimonials') Invisalign&reg; Testimonials
+              li
+                a(href='/invisalign-videos') Invisalign&reg; Videos
+              li
+                a(href='/invisalign-before-after') Invisalign&reg; Before &amp; After
+          li.dropdown
+            router-link(to='/wareham-office-location') Contact Us
+            span.subMenu_open(id="toggleClass-6" onclick='subMenu(6)')
+              i.fa.fa-plus
+            ul.submenu(id="subMenu-6" style="display: none;")
+              li
+                router-link(to='/wareham-office-location') Wareham Office Location
+              li
+                router-link(to='/appointment-request') Appointment Request
+              li
+                router-link(to='/post-appointment-survey') Post-Appointment Survey

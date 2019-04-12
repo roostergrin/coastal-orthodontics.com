@@ -1,0 +1,25 @@
+.pages-home
+  Loader(v-show='loading')
+  Header
+  .homecontent(v-if="props")
+    .homepageslider
+     .container
+       swiper(:options='swiperOption')
+         swiper-slide(v-for='homeSlider in props.acf.home_slider')
+            img(v-if='homeSlider.slider_image' v-bind:src='homeSlider.slider_image')
+         .slider-caption(v-if="props.acf.slider_caption" v-html:span='props.acf.slider_caption')
+    div
+      .callouts
+       .container
+        .cta-box(v-if='props' v-for="cta in props	.acf.call_to_action")
+          router-link(v-if="cta.cta_link" v-bind:to='cta.cta_link')
+           img(v-if="cta.cta_image" v-bind:src='cta.cta_image' alt='')
+           h4(v-if="cta.cta_heading" v-html:span='cta.cta_heading')
+           p(v-if="cta.cta_desc" v-html:span='cta.cta_desc')
+           span.learn-more Learn More
+      .home-about
+       .container
+        h1(v-if="props.acf.welcome_title" v-html:span='props.acf.welcome_title')
+        p(v-if="props.acf.welcome_text" v-html:span='props.acf.welcome_text')
+  Footer
+

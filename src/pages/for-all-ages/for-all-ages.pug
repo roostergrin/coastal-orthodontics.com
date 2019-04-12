@@ -1,0 +1,33 @@
+.pages-for-all-ages
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/about-orthodontics') About Orthodontics
+       li
+         router-link(to='/life-with-braces') Life with Braces
+       li
+         router-link(to='/brushing-and-flossing') Brushing and Flossing
+       li
+         router-link(to='/for-all-ages') For All Ages
+       li
+         router-link(to='/early-prevention') Early Prevention
+       li
+         router-link(to='/types-of-appliances') Types of Appliances
+       li
+         router-link(to='/palatal-expander') Palatal Expander
+       li
+         router-link(to='/orthodontic-retention') Orthodontic Retention
+       li
+         router-link(to='/emergency-care') Emergency Care
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer

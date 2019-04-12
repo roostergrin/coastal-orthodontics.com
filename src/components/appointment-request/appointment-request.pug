@@ -1,0 +1,31 @@
+.contact-form
+  form(action='https://coastal-orthodontics.com/thank-you/' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='288')
+      input(type='hidden' name='_wpcf7_version' value='5.1.1')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f288-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+    div.form-group
+     label.required
+       span Your Name
+     input(name='yourname', id='flname', class='control-form-edit', type='text')
+     span.quiet First and Last
+    div.form-group
+     label.required
+       span Your Email Address:
+     input(name='youremail', type='email', class='control-form-edit', id='emailID')
+    div.form-group
+     label.required.first
+       span Your Phone Number
+     input(name='yourphone', type='text', class='control-form-edit', id='yphone')
+    div.form-group
+     label.first
+       span Comment:
+     textarea(name='comment', type='textarea', class='comment-box', id='commentID')
+    div.form-group
+      input(type='submit', class='form-btn', value='Submit Request' onclick='return validateFormAppoint()')      
+      
+         
+    
+         

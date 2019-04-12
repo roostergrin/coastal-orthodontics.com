@@ -1,0 +1,25 @@
+.pages-tads
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/common-treatments') Common Treatments
+       li
+         router-link(to='/types-of-braces') Types of Braces
+       li
+         router-link(to='/surgical-orthodontics') Surgical Orthodontics
+       li
+         router-link(to='/tads') TADs
+       li
+         router-link(to='/acceledent-aura') AcceleDent® Aura
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer

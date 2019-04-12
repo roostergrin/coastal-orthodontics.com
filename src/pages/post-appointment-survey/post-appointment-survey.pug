@@ -1,0 +1,22 @@
+.pages-post-appointment
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .subnav
+     ul
+       li
+         router-link(to='/wareham-office-location') Wareham Office Location
+       li
+         router-link(to='/appointment-request') Appointment Request
+       li
+         router-link(to='/post-appointment-survey') Post-Appointment Survey
+   .main-content
+     .container
+       .left-area
+         H1.title(v-html='props.title.rendered')
+         .content(v-html='props.content.rendered')
+         PostAppointmentSurveyI
+       .featured-img
+         figure(v-if="props.better_featured_image")
+           img(:src='props.better_featured_image.source_url')
+  Footer
