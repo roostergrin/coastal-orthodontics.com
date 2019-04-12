@@ -11,7 +11,9 @@
   <?php wp_footer(); ?>
   <script type="text/javascript">
     WebFontConfig = {
-      google: { families: [ 'Open+Sans:400,600' ] }
+      google: {
+				families: ['Lato:300,400,700,900', 'Open+Sans+Condensed:300,300i,700']
+			}
     };
     (function() {
       var wf = document.createElement('script');

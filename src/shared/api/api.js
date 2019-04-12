@@ -1,4 +1,4 @@
-const route = 'https://coastal-orthodontics.com/wp-json'
+const route = 'https://www.coastal-orthodontics.com/wp-json'
 
 const api = () => {
   try {
