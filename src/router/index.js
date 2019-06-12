@@ -37,6 +37,7 @@ import CommonTreatments from '@/pages/common-treatments/common-treatments'
 import ThankYou from '@/pages/thank-you/thank-you'
 import Sitemap from '@/pages/sitemap/sitemap'
 import Contact from '@/pages/contact-us/contact-us'
+import Virtualsmile from '@/pages/virtualsmile/virtualsmile'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
@@ -267,6 +268,12 @@ const router = new VueRouter({
           name: 'contact form'
         }
       ]
+    },
+    {
+      path: '/virtualsmile',
+      name: 'Virtualsmile',
+      navigation: false,
+      component: Virtualsmile
     },
     {
       path: '/styleguide',

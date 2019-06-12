@@ -1,0 +1,34 @@
+.pages-meet-the-team.virtual-smile
+  Loader(v-if='loading')
+  Header
+  .inner-page(v-if="props")
+   .main-content
+       .left-area
+         .virtualsection1.feature-image
+           figure
+             img(v-bind:src='props.acf.virtual_smile_section_1_image' alt='')
+           figcaption
+             h1(v-html:p='props.acf.virtual_smile_section_1_title')
+         .virtualsection2.block-intro
+           .container
+             .intro2(v-html:p='props.acf.virtual_smile_section_2_intro')
+         .virtualsection3
+           .container
+             h3(v-html:p='props.acf.virtual_smile_section_3_title')
+             p(v-html:p='props.acf.virtual_smile_section_3_intro')
+         .virtualsection4
+           .container
+             .list-container(v-if='props.acf.virtual_smile_list')
+               .list-virtual-item(v-for='virtualsmile in props.acf.virtual_smile_list')
+                 .block-virtualsmile-imgg
+                   img(v-bind:src='virtualsmile.image')
+                 .block-virtualsmile-text
+                   h4(v-html='virtualsmile.title')
+                   .intro(v-html='virtualsmile.description')
+         .virtualsection5
+           .container
+             .virtualcontact
+               h2(v-html:p='props.acf.section_5_title')
+               ContactForm                                                                                   
+
+  Footer

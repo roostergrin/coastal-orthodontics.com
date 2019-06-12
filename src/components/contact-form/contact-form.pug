@@ -1,0 +1,44 @@
+.form-main.contact-page-form
+  form.form-main__form(@submit.prevent='validateBeforeSubmit', v-if='!formSubmitted' action='https://www.coastal-orthodontics.com/thank-you' novalidate='novalidate' class='wpcf7-form' method='post')
+    div(style='display: none')
+      input(type='hidden' name='_wpcf7' value='475')
+      input(type='hidden' name='_wpcf7_version' value='5.1.3')
+      input(type='hidden' name='_wpcf7_locale' value='en_US')
+      input(type='hidden' name='_wpcf7_unit_tag' value='wpcf7-f475-o1')
+      input(type='hidden' name='_wpcf7_container_post' value='0')
+    .form-main__group
+      .form-main__input--small
+        .labell Patient's Name
+          span.red *
+        input(name='your-name', v-model='name', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('your-name') }", type='text')
+        .errorr.help.is-danger(v-show="errors.has('your-name')") {{ errors.first('your-name') }}
+    .form-main__group
+      .form-main__input--small
+        .labell Patient's Email 
+          span.red *    
+        input(name='your-email', v-model='email', v-validate="'required|email'", :class="{ 'input': true, 'form-main__input--error': errors.has('your-email') }")
+        .errorr.help.is-danger(v-show="errors.has('your-email')") {{ errors.first('your-email') }}  
+    .form-main__group    
+      .form-main__input--small
+        .labell Patient's Phone Number 
+          span.red *       
+        input(name='your-phone', v-model='phone', v-validate="'required|numeric'", :class="{ 'input': true, 'form-main__input--error': errors.has('your-phone') }")
+        .errorr.help.is-danger(v-show="errors.has('your-phone')") {{ errors.first('your-phone') }}
+    .form-main__group      
+      .form-main__input--small
+        .labell Patient's Birthday
+        input(name='birthday', type='date')      
+    .form-main__group    
+      .form-main__textarea
+        .labell Message      
+        textarea(name='your-message', v-model='message')
+    .form-main__group
+      .form-main__input--small.agreefiled
+        input(name='use_label_element', type='checkbox') 
+        span By checking this box I agree to send my photos and information via email and I understand that the virtual exam is not always an exact diagnosis. In some cases additional records or appointments may be required.
+    .form-main__group      
+      .form-main__input--small
+        .labell File Attachment (You Can Upload Multiple Images) 
+        input.multipleupp(name='multifile-upload[]', type='file', multiple='multiple')                    
+    .form-main__button.clearfix
+      input.form-main__submit-button(type='submit' @click="validateBeforeSubmit" value='Send' onclick="ga(‘send’, ‘event’, ‘Form’, ‘Send Now’, 'Contact Us');")
