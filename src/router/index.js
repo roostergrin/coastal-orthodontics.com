@@ -41,6 +41,7 @@ import Virtualsmile from '@/pages/virtualsmile/virtualsmile'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
+import DentalMonitoring from '@/pages/dental-monitoring/dental-monitoring'
 
 Vue.use(VueRouter)
 
@@ -280,6 +281,12 @@ const router = new VueRouter({
       name: 'Styleguide',
       navigation: false,
       component: Styleguide
+    },
+    {
+      path: '/dental-monitoring',
+      name: 'Dental Monitoring',
+      navigation: false,
+      component: DentalMonitoring
     },
     {
       path: '/*',

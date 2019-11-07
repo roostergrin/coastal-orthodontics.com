@@ -1,0 +1,13 @@
+.pages-dental-monitoring
+  Loader(v-show='loading')
+  Header
+  .inner-page(v-if="props")
+    .main-content
+      h1.main-title(v-html='props.title.rendered')
+      hr
+      h2
+      | The first suite of AI-powered solutions for dental professionals.
+      .container(v-html='props.content.rendered')
+      
+    
+  Footer
