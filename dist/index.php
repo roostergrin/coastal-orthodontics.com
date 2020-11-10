@@ -9,6 +9,7 @@
 <body>
   <div id='app' role='application'></div>
   <?php wp_footer(); ?>
+  <script type="text/javascript" src="//cdn.rlets.com/capture_configs/18f/ab9/313/7cb40bda363a9b2fe1edc2f.js" async="async"></script>
   <script type="text/javascript">
     WebFontConfig = {
       google: {
