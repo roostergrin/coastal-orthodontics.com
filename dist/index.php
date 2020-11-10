@@ -4,12 +4,12 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <?php wp_head(); ?>
+	<script type="text/javascript" src="//cdn.rlets.com/capture_configs/18f/ab9/313/7cb40bda363a9b2fe1edc2f.js" async="async"></script>
+	<?php wp_head(); ?>
 </head>
 <body>
   <div id='app' role='application'></div>
   <?php wp_footer(); ?>
-  <script type="text/javascript" src="//cdn.rlets.com/capture_configs/18f/ab9/313/7cb40bda363a9b2fe1edc2f.js" async="async"></script>
   <script type="text/javascript">
     WebFontConfig = {
       google: {
