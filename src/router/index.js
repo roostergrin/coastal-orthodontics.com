@@ -37,6 +37,7 @@ import PostAppointmentSurvey from '@/pages/post-appointment-survey/post-appointm
 import CommonTreatments from '@/pages/common-treatments/common-treatments'
 import ThankYou from '@/pages/thank-you/thank-you'
 import Sitemap from '@/pages/sitemap/sitemap'
+import PrivacyPolicy from '@/pages/privacy-policy/privacy-policy'
 import Contact from '@/pages/contact-us/contact-us'
 import Virtualsmile from '@/pages/virtualsmile/virtualsmile'
 import PageNotFound from '@/pages/404/404'
@@ -65,6 +66,12 @@ const router = new VueRouter({
       name: 'Thank You',
       navigation: true,
       component: ThankYou
+    },
+    {
+      path: '/privacy-policy',
+      name: 'Privacy Policy',
+      navigation: false,
+      component: PrivacyPolicy
     },
     {
       path: '/common-treatments',
