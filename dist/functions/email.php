@@ -2,7 +2,7 @@
 // wp api custom endpoints
 add_action('rest_api_init', 'rg_register_routes');
 function rg_register_routes () {
-  register_rest_route('rg-mail/v1', 'contact', array(
+  register_rest_route('rg-mail/v1', 'virtualform', array(
     'methods' => WP_REST_Server::CREATABLE,
     'callback' => 'rg_serve_route'
   ));
@@ -14,14 +14,20 @@ function rg_serve_route () {
   global $wpdb;
 
   $data = json_decode(file_get_contents("php://input"), true);
-  $from = 'info@wordpress.com';
-  $to = 'matt@roostergrin.com';
-  $subject = 'API Contact Form';
+  $from = 'coastalorthodontics@gmail.com';
+  $to = 'form7test@gmail.com';
+  $subject = 'Coastal-orthodontics.com - Virtual Smile Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
-  $message .= '<p><h4><strong>Form Submission by: </strong></h4>' . $data['firstname'] . '' . $data['lastname'] . '</p>';
-  $message .= '<p><h4><strong>Email: </strong></h4>' . $data['email'] . '</p>';
+  $message .= '<p><h4><strong>Patient Name:</strong></h4> ' . $data['yourName'] . '</p>';
+  $message .= '<p><h4><strong>Patient Email Address:</strong></h4> ' . $data['email'] . '</p>';
+  $message .= '<p><h4><strong>Patient Phone Number:</strong></h4> ' . $data['phoneNumber'] . '</p>';
+  $message .= '<p><h4><strong>Patient Birthday:</strong></h4> ' . $data['patientBirthday'] . '</p>';
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
+  $message .= '<h4><strong>Attachment Images:</strong></h4> ';
+    for ($x = 0; $x <= 4; $x++) {
+      $message .= '<p><a href="' . $data['attachment'][$x] . '" target="_blank">Attachment ' . $x . '</p>';
+    }
   $message .= '</body></html>';
 
   $table_name = $wpdb->prefix . 'emails';

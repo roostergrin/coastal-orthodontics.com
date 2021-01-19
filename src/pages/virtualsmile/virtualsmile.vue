@@ -4,7 +4,7 @@
 import Loader from 'components/loader/loader'
 import Header from 'components/header/header'
 import Footer from 'components/footer/footer'
-import ContactForm from 'components/contact-form/contact-form'
+import AppointmentRequestForm from 'components/form/appointment-request-form/appointment-request-form'
 
 export default {
   name: 'virtualsmile',
@@ -20,7 +20,7 @@ export default {
     Loader,
     Header,
     Footer,
-    ContactForm
+    AppointmentRequestForm
   }
 }
 </script>

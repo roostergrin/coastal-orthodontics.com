@@ -73,6 +73,66 @@ h1, h2, h3, h4, h5, h6
 .virtual-smile .feature-image
   position: relative
 
+.form-contact__error-message
+  color: red 
+
+.form-virtual-consult__group--inline
+  display: flex
+  display: -webkit-box
+  display: -ms-flexbox
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  padding-bottom: 0
+
+.form-virtual-consult__item
+  position: relative
+  padding-bottom: 1.8rem
+  width: 25%
+  text-align: left
+
+.form-virtual-consult__checkbox label
+  margin-left: 25px  
+
+.form-virtual-consult__checkbox-overlay--error
+  border-color: tomato  
+
+.form-main__input--small.agreefiled
+  position: relative     
+
+.form-virtual-consult__input--upload
+  display: inline-block
+  transition: all 0.25s cubic-bezier(0, 0, 0.2, 1)
+  border: none
+  background: #376aae
+  cursor: pointer
+  padding: 9px 0
+  width: 100%
+  max-width: 163px
+  text-align: center
+  letter-spacing: 1px
+  color: #fff
+  font-size: 14px
+
+.virtualcontact span.form-main__submit-button
+  background: #f9881d
+  color: #fff
+  border: none
+  cursor: pointer
+  padding: 12px 10px
+  font-size: 16px
+  font-weight: 500
+  text-transform: uppercase 
+  display: block 
+
+.virtualcontact span.form-main__submit-button:hover
+  background: #e9780d
+
+.form-virtual-consult__input--upload input[type="file"]
+  display: none    
+
 .virtual-smile .feature-image figure  
   margin: 0
 
@@ -972,6 +1032,11 @@ img
     width: 100%
   .virtual-smile .virtualsection5 .virtualcontact h2    
     font-size: 30px
+
+  .form-virtual-consult__item
+    width: 46%;
+    font-size: 12px
+    padding-right: 5px
 
 @media only screen and (max-width: 479px)
   .main-content
