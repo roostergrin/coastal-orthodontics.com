@@ -14,8 +14,8 @@ function rg_serve_route () {
   global $wpdb;
 
   $data = json_decode(file_get_contents("php://input"), true);
-  $from = 'coastalorthodontics@gmail.com';
-  $to = 'form7test@gmail.com';
+  $from = 'info@wordpress.com';
+  $to = 'coastalorthodontics@gmail.com';
   $subject = 'Coastal-orthodontics.com - Virtual Smile Form';
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
@@ -26,7 +26,8 @@ function rg_serve_route () {
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
   $message .= '<h4><strong>Attachment Images:</strong></h4> ';
     for ($x = 0; $x <= 4; $x++) {
-      $message .= '<p><a href="' . $data['attachment'][$x] . '" target="_blank">Attachment ' . $x . '</p>';
+		$image_list = $x + 1;
+      $message .= '<p><a href="' . $data['attachment'][$x] . '" target="_blank">Attachment ' . $image_list . '</p>';
     }
   $message .= '</body></html>';
 
