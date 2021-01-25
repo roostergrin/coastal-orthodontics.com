@@ -25,9 +25,11 @@ function rg_serve_route () {
   $message .= '<p><h4><strong>Patient Birthday:</strong></h4> ' . $data['patientBirthday'] . '</p>';
   $message .= '<p><h4><strong>Message:</strong></h4> ' . $data['message'] . '</p>';
   $message .= '<h4><strong>Attachment Images:</strong></h4> ';
-    for ($x = 0; $x <= 4; $x++) {
-		$image_list = $x + 1;
+   for ($x = 0; $x <= 19; $x++) {
+        $image_list = $x + 1;
+    if($data['attachment'][$x] !=''){
       $message .= '<p><a href="' . $data['attachment'][$x] . '" target="_blank">Attachment ' . $image_list . '</p>';
+}
     }
   $message .= '</body></html>';
 
