@@ -40,6 +40,7 @@ import Sitemap from '@/pages/sitemap/sitemap'
 import PrivacyPolicy from '@/pages/privacy-policy/privacy-policy'
 import Contact from '@/pages/contact-us/contact-us'
 import Virtualsmile from '@/pages/virtualsmile/virtualsmile'
+import accessibilityStatement from '@/pages/accessibility-statement/accessibility-statement'
 import PageNotFound from '@/pages/404/404'
 import scrollBehavior from '@/shared/functionality/scroll-behavior'
 import Styleguide from '@/styleguide/styleguide'
@@ -288,6 +289,12 @@ const router = new VueRouter({
       name: 'Virtualsmile',
       navigation: false,
       component: Virtualsmile
+    },
+    {
+      path: '/accessibility-statement',
+      name: 'Accessibility Statement',
+      navigation: false,
+      component: accessibilityStatement
     },
     {
       path: '/styleguide',
