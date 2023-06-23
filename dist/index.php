@@ -10,13 +10,13 @@
 <body>
   <div id='app' role='application'></div>
   <?php wp_footer(); ?>
-  <div>
+  <!-- <div>
 	<a style='display: block' href='https://www.zocdoc.com/practice/coastal-orthodontics-88101' class='zd-plugin' data-type='book-button' data-practice-id='88101' title='Coastal Orthodontics'>
 		<img src='https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png' alt='Coastal Orthodontics' title='Coastal Orthodontics' style='border: 0'/>
 	</a>
   </div>
   <script>(function (d) {var script = d.createElement('script'); script.type = 'text/javascript'; script.async = true; script.src = 'https://offsiteschedule.zocdoc.com/plugin/embed';
-		var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);})(document);</script>
+		var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);})(document);</script> -->
   <script type="text/javascript">
     WebFontConfig = {
       google: {
@@ -60,8 +60,8 @@
           x.style.display = "none";
 			}
 		}
-		
-		
+
+
 	</script>
 	<script id="rhinogram-embed" src="https://app.rhinogram.com/widget/embed.js?id=3347f34b-9595-4ff7-bb94-6a9b148e82ea"></script>
 	<script>
@@ -128,8 +128,8 @@
 			}
 		}
 	</script>
-  
-  
+
+
 <script type="text/javascript">
 
   (function(d){
@@ -141,11 +141,11 @@
   (function(d){
     var ns = d.createElement("noscript");
     ns.innerHTML = `Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a>`;
-    (d.body || d.head).appendChild(ns);})(document);   
+    (d.body || d.head).appendChild(ns);})(document);
 
 </script>
 
 <div class="footer__container-userway-trigger" id="accessibilityWidget" tabindex="0">Click for Accessibility</div>
-  
+
 </body>
 </html>
