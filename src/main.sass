@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6
   background: linear-gradient(to bottom, #649ae0 0%, #19549f 100%)
 
 .footer .location
-  width: 47.5%
+  width: 45%
   float: left
   padding: 15px 0
 
@@ -585,8 +585,35 @@ h1, h2, h3, h4, h5, h6
   padding-top: 65px
   font-size: 15px
 
+.working_hours  
+  width: 28%
+  float: left
+  margin-left: 60px
+  color: #fff
+
+  th
+    font-weight: 300
+
+  &__title
+    font-family: 'Open Sans Condensed', sans-serif
+    color: #f98816
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: bold
+    margin: 0.5em 0
+    padding-top: 15px
+
+  &__list
+    text-align: left
+    font-size: 14px
+
+  &__differ
+    color: #e9cb70
+
+
+
 .foot-logo
-  width: 47.5%
+  width: 20%
   float: right
   padding: 15px 0
   a
@@ -997,7 +1024,10 @@ img
   .virtual-smile .block-virtualsmile-text h4
     font-size: 20px
   .block-virtualsmile-text .intro
-    min-height: 94px        
+    min-height: 94px
+  .working_hours
+    margin-left: 16px
+    width: 32%        
 
 
 @media only screen and (max-width: 767px)
@@ -1024,6 +1054,19 @@ img
     padding: 20px 0
   .footer .location, .foot-logo, .footer-menu, .footer-social
     width: 100%
+  .working_hours
+    width: 100%
+    margin-left: 20px
+    margin-bottom: 30px
+  .working_hours__title
+    max-width: 210px
+    margin: 0px auto
+    padding-bottom: 10px
+  .working_hours__list
+    max-width: 210px
+    margin: 0px auto
+  .location a
+    margin: 0px auto        
   .virtual-smile .feature-image figcaption h1
     font-size: 23px
   .virtual-smile .block-intro p
