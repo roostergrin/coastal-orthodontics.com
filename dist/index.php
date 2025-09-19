@@ -4,6 +4,15 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DLES93SXLT"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-DLES93SXLT');
+	</script>  
 	<!-- <script type="text/javascript" src="//cdn.rlets.com/capture_configs/18f/ab9/313/7cb40bda363a9b2fe1edc2f.js" async="async"></script> -->
 	<?php wp_head(); ?>
 </head>
